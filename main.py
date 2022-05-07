@@ -15,7 +15,7 @@ while True:
             if event.key == pygame.K_SPACE:
                 import snake
             if event.key == pygame.K_BACKSPACE:
-                import snake
+                import runner_video
 
 
         
