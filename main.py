@@ -3,18 +3,18 @@ import pygame
 pygame.init()
 game_active = False
 screen = pygame.display.set_mode((800,600))
-image = pygame.image.load("image4.jpg").convert_alpha()
+image = pygame.image.load("background/image4.jpg").convert_alpha()
 image_rect = image.get_rect(center = (400,300))
 
+test_font = pygame.font.Font('Font/PoetsenOne-Regular.ttf', 30)
+test_font1 = pygame.font.Font('Font/Pixeltype.ttf', 60)
 
-test_font = pygame.font.Font('font/Pixeltype.ttf', 50)
-
-snake = pygame.image.load("snakethumb.png").convert_alpha()
+snake = pygame.image.load("background/snakethumb.png").convert_alpha()
 snake_rect = snake.get_rect(midbottom = (210,520))
 
-runner = pygame.image.load("pixelrun.jpg").convert_alpha()
+runner = pygame.image.load("background/pixelrun.jpg").convert_alpha()
 runner_rect = runner.get_rect(midbottom = (600,520))
-music = pygame.mixer.Sound("intromusic.wav")
+music = pygame.mixer.Sound("background/intromusic.wav")
 music.play(loops = -1)
 
 
@@ -36,13 +36,13 @@ while True:
         
     screen.fill((204,229,253))
     screen.blit(image,image_rect)
-    text = test_font.render("WELCOME TO GAME WORLD",False,(250,2,20))
+    text = test_font1.render("WELCOME TO GAME WORLD",False,(250,2,20))
     text_rect = text.get_rect(center = (400,80))
     screen.blit(text,text_rect)
-    text1 = test_font.render("LET'S GET STARTED",False,(250,2,20))
+    text1 = test_font1.render("LET'S GET STARTED !!!",False,(250,2,20))
     text_rect1 = text1.get_rect(center = (400,150))
     screen.blit(text1,text_rect1)
-    text2 = test_font.render("SELECT A GAME TO PLAY",False,(0,2,1))
+    text2 = test_font.render("SELECT A GAME TO PLAY",False,(0,2,100))
     text_rect2 = text2.get_rect(center = (400,400))
     screen.blit(text2,text_rect2)
     screen.blit(snake,snake_rect)
